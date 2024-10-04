@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-gray-900">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-10 text-gray-300">Contact Me</h2>
+        <h2 className="text-4xl font-bold text-center mb-10 text-white">Contact Me</h2>
         <form className="max-w-lg mx-auto">
           <div className="mb-4">
             <label htmlFor="name" className="block text-lg font-medium text-gray-400">Name</label>

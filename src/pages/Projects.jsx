@@ -5,7 +5,7 @@ import ProjectCard from '../components/ProjectCard';
 const Projects = () => {
   const projects = [
     {
-      title: 'Project One',
+      title: 'Candy Color',
       description: 'A brief description of Project One.',
       imageUrl: `${import.meta.env.VITE_API_URL}/assets/img/Candy.png`,
       link: "https://alaani-candy-color.netlify.app/",
@@ -24,13 +24,13 @@ const Projects = () => {
       },
   
     {
-      title: 'Project Two',
+      title: 'Tgif',
       description: 'A brief description of Project Two.',
       imageUrl: `${import.meta.env.VITE_API_URL}/assets/img/Tgif.png`,
       link: "https://alaani-tgif.netlify.app/",
     },
     {
-        title: "More Info",
+        title: "More Info , if you like more automation with Python",
         description: "Double Check my GITHUB",
         imageUrl: `${import.meta.env.VITE_API_URL}/assets/img/download.jpg`,
         link: "https://github.com/hibaalaani",
@@ -38,10 +38,11 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-10  bg-gray-500 bg-gray-100">
-    <div className="container mx-auto">
-      <h2 className="text-3xl font-bold text-center mb-8">Projects</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <section  className="py-10  bg-gray-500 bg-gray-100">
+    
+      <h2 className="text-3xl text-white font-bold text-center my-10">Projects</h2>
+      <div className="container mx-auto p-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <ProjectCard key={index} {...project}   imageUrl = {project.imageUrl}/>
         ))}
