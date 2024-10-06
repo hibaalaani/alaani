@@ -13,16 +13,16 @@ import Experience from './pages/Experience';
 
 function App() {
   return (
-    <Router basename="/alaani">
+    <Router >
       {/* <div className="App"> */}
       <Navbar />
         {/* <Header /> */}
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/alaani" element={<Home />} />
+          <Route path="/alaani/about" element={<About />} />
+          <Route path="/alaani/projects" element={<Projects />} />
+          <Route path="/alaani/experience" element={<Experience />} />
+          <Route path="/alaani/contact" element={<Contact />} />
         </Routes>
         <Footer />
       {/* </div> */}
