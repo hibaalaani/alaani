@@ -2,55 +2,48 @@ import { motion } from 'framer-motion';
 
 const experiences = [
   {
-    role: "Senior Front-End Developer",
-    company: "Midwest Sterilization Corporation",
-    duration: "Jul 2022 - Feb 2024",
-    location: "Murphysboro, Illinois, USA",
+    role: "Web Developer Instructor",
+    company: "DCI (Digital Career Institute), Berlin",
+    duration: "February 2021 - current",
+    location: "Berlin, Germany",
     description: [
-      "Developing dynamic web pages using HTML/HTML5, CSS/CSS3, Bootstrap, jQuery, Angular13, ReactJS, NodeJS",
-      "Implemented client-side Interface using React.js and worked using React.js components, Forms, Events, Keys, Router, Animations and Redux concept.",
-      "Involved in React.js for Data patterns which improves readability and maintainability.",
-      "Created Typescript reusable components and services.",
-      "Worked with version control systems (GIT, Bitbucket, GitLab, Docker)."
+      "Taught aspiring developers web development, focusing on modern technologies such as React.js, JavaScript, and Python. Guided students through the process of building web applications, debugging, and testing. Additionally, helped them understand concepts related to responsive design, version control, and automation. Mentored students on real-world projects, preparing them for the job market"
     ]
   },
   {
-    role: "Senior Front-End Developer",
-    company: "Midwest Sterilization Corporation",
-    duration: "Jul 2022 - Feb 2024",
-    location: "Murphysboro, Illinois, USA",
+    role: "Web Developer & Web Automation Specialist (Python/Selenium)",
+    company: "There Is No Planet B",
+    duration: "August 2020 - April 2021",
+    location: "Berlin, Germany",
     description: [
-      "Developing dynamic web pages using HTML/HTML5, CSS/CSS3, Bootstrap, jQuery, Angular13, ReactJS, NodeJS",
-      "Implemented client-side Interface using React.js and worked using React.js components, Forms, Events, Keys, Router, Animations and Redux concept.",
-      "Involved in React.js for Data patterns which improves readability and maintainability.",
-      "Created Typescript reusable components and services.",
-      "Worked with version control systems (GIT, Bitbucket, GitLab, Docker)."
+      "As a web developer and automation specialist, I contributed to building and maintaining web platforms while also developing automation scripts using Python and Selenium. Automated repetitive tasks such as data scraping and form submissions to enhance the efficiency of internal processes. Focused on performance optimization and clean code practices."
     ]
   },
   {
-    role: "Senior Front-End Developer",
-    company: "Midwest Sterilization Corporation",
-    duration: "Jul 2022 - Feb 2024",
-    location: "Murphysboro, Illinois, USA",
+    role: "Web Developer",
+    company: "Binary Pixels",
+    duration: "2018 - 2020",
+    location: "Berlin, Germany",
     description: [
-      "Developing dynamic web pages using HTML/HTML5, CSS/CSS3, Bootstrap, jQuery, Angular13, ReactJS, NodeJS",
-      "Implemented client-side Interface using React.js and worked using React.js components, Forms, Events, Keys, Router, Animations and Redux concept.",
-      "Involved in React.js for Data patterns which improves readability and maintainability.",
-      "Created Typescript reusable components and services.",
-      "Worked with version control systems (GIT, Bitbucket, GitLab, Docker)."
+      "Worked as a full-stack web developer, specializing in creating dynamic and interactive websites. Used technologies like React.js, Node.js, and PostgreSQL to develop scalable web applications. Collaborated with cross-functional teams to deliver high-quality products, while continuously learning and applying new technologies"
     ]
   },
   {
-    role: "Senior Front-End Developer",
-    company: "Midwest Sterilization Corporation",
-    duration: "Jul 2022 - Feb 2024",
-    location: "Murphysboro, Illinois, USA",
+    role: "Freelance Web Designer",
+    company: "Binary Pixel",
+    duration: "2017 - 2019",
+    location: "Genova Italy",
     description: [
-      "Developing dynamic web pages using HTML/HTML5, CSS/CSS3, Bootstrap, jQuery, Angular13, ReactJS, NodeJS",
-      "Implemented client-side Interface using React.js and worked using React.js components, Forms, Events, Keys, Router, Animations and Redux concept.",
-      "Involved in React.js for Data patterns which improves readability and maintainability.",
-      "Created Typescript reusable components and services.",
-      "Worked with version control systems (GIT, Bitbucket, GitLab, Docker)."
+      "Worked independently as a web designer, creating visually appealing and user-friendly websites for clients. Focused on crafting responsive layouts using HTML, CSS, and JavaScript. Collaborated with clients to deliver projects that met their needs, emphasizing creativity and a modern design approach."
+    ]
+  },
+  {
+    role: "Electronic and Communication Engineering Student",
+    company: "University of Al nahrain, Iraq",
+    duration: "2005 - 2009",
+    location: "Iraq",
+    description: [
+      "Developed a strong foundation in electronic and communication engineering, learning about digital systems, telecommunications, and microprocessor applications. Gained skills in problem-solving and analytical thinking through various projects and assignments."
     ]
   },
   // Add more experience objects if needed
@@ -60,7 +53,7 @@ const Experience = () => {
   return (
     <section className="px-8 py-16 bg-gray-100" >
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-12">Experience</h2>
+        <h2 className="text-4xl font-bold my-12">Experience</h2>
 
         <div className="relative">
           <div className="absolute w-1 h-full bg-gray-300 left-1/2 transform -translate-x-1/2"></div>
@@ -76,11 +69,11 @@ const Experience = () => {
             >
               <div className={`bg-white shadow-lg p-6 rounded-lg max-w-lg ${index % 2 === 0 ? 'ml-12' : 'mr-12'}`}>
                 <h3 className="text-2xl font-semibold mb-2">{exp.role}</h3>
-                <p className="text-lg font-light text-gray-600 mb-4">{exp.company}</p>
+                <p className="text-lg font-light text-gray-800 mb-4">{exp.company}</p>
                 <p className="text-sm font-medium mb-2">{exp.duration} | {exp.location}</p>
-                <ul className="list-disc ml-5 text-left">
+                <ul className=" ml-5 text-left">
                   {exp.description.map((desc, idx) => (
-                    <li key={idx} className="mb-2 text-gray-700">{desc}</li>
+                    <li key={idx} className="mb-2 text-gray-800">{desc}</li>
                   ))}
                 </ul>
               </div>
