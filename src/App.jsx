@@ -13,7 +13,7 @@ import Experience from './pages/Experience';
 
 function App() {
   return (
-    <Router basename='alaani' >
+    <Router basename='/alaani' >
       {/* <div className="App"> */}
       <Navbar />
         {/* <Header /> */}
