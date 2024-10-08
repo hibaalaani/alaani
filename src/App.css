@@ -1,42 +1,40 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.about-section {
+  padding: 50px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text-writer {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: inline-block;
+  overflow: hidden;
+  white-space: wrap;
+  width: 100%; /* Adjust for responsive width */
+  border-right: 3px solid; /* Cursor effect */
+  animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
 }
 
-.card {
-  padding: 2em;
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: rgb(71, 59, 50); }
 }
 
-.read-the-docs {
-  color: #888;
-} */
+/* Style for the paragraph after typing */
+.about-paragraph {
+  font-family: 'Arial', sans-serif;
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
