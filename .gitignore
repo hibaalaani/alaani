@@ -8,8 +8,9 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-# dist
-# dist-ssr
+dist/
+build/
+public/
 *.local
 
 # Editor directories and files
@@ -25,3 +26,4 @@ node_modules
 *.env
 *.env.productionc
 *.env.local
+.env*
