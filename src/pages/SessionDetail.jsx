@@ -7,6 +7,7 @@ const SessionDetail = () => {
   const [session, setSession] = useState({});
   const [childName, setChildName] = useState('');
   const [childAge, setChildAge] = useState('');
+  const [enrollmentSuccess, setEnrollmentSuccess] = useState(false);
   const token = localStorage.getItem('token');
 
   useEffect(() => {
@@ -27,6 +28,7 @@ const SessionDetail = () => {
         child_name: childName,
         child_age: childAge,
       });
+      setEnrollmentSuccess(true);
       alert('Enrollment successful!');
     } catch (error) {
       console.error('Error enrolling in session', error);
@@ -34,41 +36,59 @@ const SessionDetail = () => {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen py-10">
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="bg-white shadow-md rounded-lg overflow-hidden p-6">
-        <h1 className="text-2xl font-bold text-gray-900">{session.title}</h1>
-        <p className="text-gray-600">{new Date(session.date).toLocaleString()}</p>
-        <p className="text-gray-600">Cost: €{session.cost}</p>
+    <div className="bg-gray-100 py-10">
+    <div className="container mx-auto px-4">
+        {session ? (
+            <div className="max-w-2xl mx-auto bg-white shadow-lg rounded-lg p-6">
+                <div className="text-center">
+                    <h1 className="text-4xl font-bold mb-4 text-indigo-900">{session.title}</h1>
+                    <p className="text-gray-600 text-lg mb-4">{new Date(session.date).toLocaleString()}</p>
+                    <p className="text-gray-800 font-bold mb-6">Cost: {session.cost} €</p>
+                </div>
 
-        <div className="mt-6">
-          <h2 className="text-xl font-bold text-gray-800 mb-4">Enroll in this Session</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <input
-              type="text"
-              placeholder="Child's Name"
-              value={childName}
-              onChange={(e) => setChildName(e.target.value)}
-              className="border rounded-lg px-4 py-2 w-full"
-            />
-            <input
-              type="number"
-              placeholder="Child's Age"
-              value={childAge}
-              onChange={(e) => setChildAge(e.target.value)}
-              className="border rounded-lg px-4 py-2 w-full"
-            />
-          </div>
-          <button
-            onClick={handleEnrollment}
-            className="mt-4 bg-blue-500 text-white font-bold px-6 py-2 rounded-lg"
-          >
-            Enroll
-          </button>
-        </div>
-      </div>
+                <div className="text-center">
+                    <h2 className="text-2xl font-semibold mb-4 text-gray-800">Enroll Your Child</h2>
+                    <form onSubmit={handleEnrollment} className="space-y-4">
+                        <div>
+                            <input
+                                type="text"
+                                placeholder="Child's Name"
+                                value={childName}
+                                onChange={(e) => setChildName(e.target.value)}
+                                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500"
+                                required
+                            />
+                        </div>
+                        <div>
+                            <input
+                                type="number"
+                                placeholder="Child's Age"
+                                value={childAge}
+                                onChange={(e) => setChildAge(e.target.value)}
+                                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500"
+                                required
+                            />
+                        </div>
+                        <button
+                            type="submit"
+                            className="w-full bg-indigo-900 text-white py-3 rounded-lg hover:bg-indigo-800 transition-colors"
+                        >
+                            Enroll
+                        </button>
+                    </form>
+
+                    {enrollmentSuccess && (
+                        <p className="text-green-500 font-semibold mt-4">
+                            Enrollment successful for {childName}!
+                        </p>
+                    )}
+                </div>
+            </div>
+        ) : (
+            <p className="text-center text-red-500">Loading session details...</p>
+        )}
     </div>
-  </div>
+</div>
   );
 };
 
